@@ -1,5 +1,8 @@
 package page;
 
+import java.nio.file.Files;
+import java.util.Base64;
+
 import org.junit.Test;
 import org.openqa.selenium.By;
 

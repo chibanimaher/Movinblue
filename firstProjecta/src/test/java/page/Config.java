@@ -1,6 +1,7 @@
 package page;
 
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Before;
@@ -38,6 +39,7 @@ public void setUp() throws Exception {
 
          // Serveur de lancement d'application
          _driverANDROID = new AndroidDriver<AndroidElement>(new URL("http://localhost:4723/wd/hub"), _cap);
+         _driverANDROID.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
          Thread.sleep(15000);
          // Temps par defaut pour localiser les elements
          //_wait = new WebDriverWait(_driverANDROID, Timeout.millis(20000));

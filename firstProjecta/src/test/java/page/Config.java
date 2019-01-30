@@ -40,7 +40,7 @@ public void setUp() throws Exception {
          // Serveur de lancement d'application
          _driverANDROID = new AndroidDriver<AndroidElement>(new URL("http://localhost:4723/wd/hub"), _cap);
          _driverANDROID.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-         Thread.sleep(15000);
+        //Thread.sleep(15000);
          // Temps par defaut pour localiser les elements
          //_wait = new WebDriverWait(_driverANDROID, Timeout.millis(20000));
 
